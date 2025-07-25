@@ -39,14 +39,45 @@
             </div>-->
         <div id="loading" style="display:none;">
             <div class="loading-spinner"></div>
-            <p>Syncing with message board...</p>
+            <p>Connecting to message board...</p>
         </div>
     </main>
      <!-- Socket.IO for real-time messaging -->
-     <script src="https://unpkg.com/socket.io-client@4.5.4/dist/socket.io.js"></script>
+   <!--  <script src="https://unpkg.com/socket.io-client@4.5.4/dist/socket.io.js"></script>
+    <!-- Optional: Loading animation script
+    <script src="loading.js" defer></script> -->
+
      <!-- Main application script -->
     <script src="Message.js"></script>
-    <!-- Optional: Loading animation script -->
-    <script src="loading.js" defer></script>
+    
+         <!-- Firebase SDK for realtime database -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script>
+      // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBMz20zFwPMMFmA7V1I8ZNUi94DUYMqxKE",
+  authDomain: "anonymous-messages-d825d.firebaseapp.com",
+  databaseURL: "https://anonymous-messages-d825d-default-rtdb.firebaseio.com",
+  projectId: "anonymous-messages-d825d",
+  storageBucket: "anonymous-messages-d825d.firebasestorage.app",
+  messagingSenderId: "890708532097",
+  appId: "1:890708532097:web:c07264bdba90285d4fe680",
+  measurementId: "G-CCMQDEW2X1"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+    </script>
 </body>
 </html>
