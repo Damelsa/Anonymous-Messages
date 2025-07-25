@@ -11,26 +11,32 @@
         <h1>Public Messages</h1>
         <div class="header-buttons">
             <button onclick="window.location.href='https://damelsa.github.io/Anonymous-Messages/'">Back to Home</button>
-            <button id="refreshBtn" title="Get latest messages from server">Refresh Messages</button>
+            <button id="refreshBtn" onclick="window.location.reload()">Refresh Page</button>
         </div>
     </header>
     <main>
         <div id="connectionStatus"></div>
         <div id="messagesDisplay">
-             <div id="messagesDisplay">
-            <h2>All Public Messages</h2>
-            <div class="info-box">
-               <p>All messages are public. Anyone can view on this public board</p>
-            </div>
-            <!-- Messages will be dynamically inserted here -->
-            <div id="messages" class="message-container">
-                  <div id="messages" class="message-container">
+            <div id="messagesDisplay">
+        <h2>Public Message Board</h2>
+        <div class="info-box">
+            <p>
+                <!--All messages here are completely public.-->
+                Anyone with this link can read and post messages.
+            </p>
+        </div>
+        <div id="messages" class="message-container">
+            <!-- Messages will load here from localStorage -->
+        </div>
+    </div>
+            <!--<div id="messages" class="message-container">
+                 <div id="messages" class="message-container">
                 <div class="message-template" style="display:none;">
                     <div class="message-content"></div>
                     <div class="message-time"></div>
                 </div>
             </div
-            </div>
+            </div>-->
         <div id="loading" style="display:none;">
             <div class="loading-spinner"></div>
             <p>Syncing with message board...</p>
