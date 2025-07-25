@@ -11,8 +11,7 @@
         <h1>Public Messages</h1>
         <div class="header-buttons">
             <button onclick="window.location.href='https://damelsa.github.io/Anonymous-Messages/'">Back to Home</button>
-            <button id="refreshBtn">Refresh Messages</button>
-            <button id="shareBtn">Share Your Link</button>
+            <button id="refreshBtn" title="Get latest messages from server">Refresh Messages</button>
         </div>
     </header>
     <main>
@@ -21,17 +20,20 @@
              <div id="messagesDisplay">
             <h2>All Public Messages</h2>
             <div class="info-box">
-                <p>All messages are public and visible to anyone with the portal link</p>
+               <p>All messages are public. Anyone can view on this public board</p>
             </div>
             <!-- Messages will be dynamically inserted here -->
             <div id="messages" class="message-container">
-                   <div id="messages" class="message-container">
-                <!-- Messages will appear here automatically -->
-            </div>
+                  <div id="messages" class="message-container">
+                <div class="message-template" style="display:none;">
+                    <div class="message-content"></div>
+                    <div class="message-time"></div>
+                </div>
+            </div
             </div>
         <div id="loading" style="display:none;">
             <div class="loading-spinner"></div>
-            <p>Loading public messages...</p>
+            <p>Syncing with message board...</p>
         </div>
     </main>
      <!-- Socket.IO for real-time messaging -->
