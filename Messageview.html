@@ -7,25 +7,38 @@
     <link rel="stylesheet" href="Message.css">
 </head>
 <body>
-    <header>
-        <h1>Messages</h1>
-        <button onclick="window.location.href='https://damelsa.github.io/Anonymous-Messages/'">Back to Home</button>
-          <button id="refreshBtn">Refresh Messages</button>
+     <header>
+        <h1>Public Messages</h1>
+        <div class="header-buttons">
+            <button onclick="window.location.href='https://damelsa.github.io/Anonymous-Messages/'">Back to Home</button>
+            <button id="refreshBtn">Refresh Messages</button>
+            <button id="shareBtn">Share Your Link</button>
+        </div>
     </header>
     <main>
         <div id="connectionStatus"></div>
         <div id="messagesDisplay">
-            <h2>Messages</h2>
-            <div id="messages" class="message-container"></div>
+             <div id="messagesDisplay">
+            <h2>All Public Messages</h2>
+            <div class="info-box">
+                <p>All messages are public and visible to anyone with the portal link</p>
+            </div>
             <!-- Messages will be dynamically inserted here -->
-        <div id="loading" class="loading-indicator" style="display:none;">
-    <div class="spinner"></div>
-    <p>Loading messages...</p>
-</div>
+            <div id="messages" class="message-container">
+                   <div id="messages" class="message-container">
+                <!-- Messages will appear here automatically -->
+            </div>
+            </div>
+        <div id="loading" style="display:none;">
+            <div class="loading-spinner"></div>
+            <p>Loading public messages...</p>
+        </div>
     </main>
      <!-- Socket.IO for real-time messaging -->
      <script src="https://unpkg.com/socket.io-client@4.5.4/dist/socket.io.js"></script>
      <!-- Main application script -->
     <script src="Message.js"></script>
+    <!-- Optional: Loading animation script -->
+    <script src="loading.js" defer></script>
 </body>
 </html>
